@@ -34,7 +34,10 @@ class DriverProxy {
 };
 
 // доступ через []
-DriverProxy operator[](uint8_t channel)
+DriverProxy operator[](uint8_t channel);
+
+// записать микросекунды. 0 отключает канал
+virtual bool writeMicroseconds(uint8_t channel, uint16_t us) = 0;
 ```
 
 ### MultiServoDriverPCA9685
